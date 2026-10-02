@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "{{ALLOW_COMMANDS}}",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "deny": [
+      "Bash(git push:*)",
+      "{{DENY_READ_GENERATED}}"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node .claude/hooks/block-generated-edits.js" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node .claude/hooks/format-on-edit.js" }
+        ]
+      }
+    ]
+  }
+}

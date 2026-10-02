@@ -1,0 +1,6 @@
+---
+description: Project rules, delegated to AGENTS.md
+alwaysApply: true
+---
+
+Follow the rules in `AGENTS.md` at the repo root, and the nested `AGENTS.md` in any folder you edit. Engineering docs are in `docs/` (start with `docs/architecture.md`).
