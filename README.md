@@ -2,7 +2,7 @@
 
 Make any **existing codebase** ready for coding agents (Claude Code, Copilot, Cursor, …) with one command.
 
-The kit installs a Claude Code skill, `/agent-ready`. Run it inside a repo and it will:
+The kit installs a skill, `/agent-ready`. Run it inside a repo and it will:
 
 1. **Scan** the code: stack, commands, CI, tests, generated code, architecture and existing agent files.
 2. **Interview you** about the areas, commands, team rules, gotchas, and the tooling you want. Its options come pre-filled from what it found.
